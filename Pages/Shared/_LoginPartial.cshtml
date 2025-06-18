@@ -66,13 +66,13 @@
     </li>
     <li class="nav-item">
         @* <a class="nav-link" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Sign out</a> *@
-        <a class="nav-link header-button" href="/signout">Sign out</a>
+        <a class="nav-link header-button" href="@Url.Content("~/MicrosoftIdentity/Account/SignOut")">Sign out</a>
     </li>
 }
 else
 {
     <li class="nav-item">
-        <a class="nav-link header-button" role="button" href="/SignIn?handler=Default">Sign in</a>
+        <a class="nav-link header-button" role="button" href="@Url.Content("~/MicrosoftIdentity/Account/SignIn")">Sign in</a>
     </li>
 }
 </ul>

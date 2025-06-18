@@ -1,7 +1,25 @@
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.UI;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
+// Add Microsoft Entra ID authentication
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("MicrosoftEntraId"))
+    .EnableTokenAcquisitionToCallDownstreamApi()
+    .AddDownstreamApi("WoodgroveGroceriesApi", builder.Configuration.GetSection("MicrosoftEntraId"))
+    .AddInMemoryTokenCaches();
+    
+// Add authorization services
+builder.Services.AddAuthorization();
+
+// Important: Add both RazorPages and MVC with Views
+builder.Services.AddRazorPages()
+    .AddMicrosoftIdentityUI();
+
+builder.Services.AddControllersWithViews()
+    .AddMicrosoftIdentityUI();
 
 var app = builder.Build();
 
@@ -14,13 +32,15 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+// Important: Map both endpoints
+app.MapRazorPages();
+app.MapControllers();
 
 app.Run();
