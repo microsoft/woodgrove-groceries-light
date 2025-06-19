@@ -98,10 +98,122 @@ public static class ProductData
             },
             new Product
             {
-                Category = "Beveragess",
+                Category = "Beverages",
                 Name = "Six Bottles Of Water pack",
                 Price = 3.0m,
                 ImageUrl = "/images/products/water.png"
+            },
+            new Product
+            {
+                Category = "Beverages",
+                Name = "Fresh orange juice 1 L",
+                Price = 4.0m,
+                ImageUrl = "/images/products/orange-juice.png"
+            },
+            new Product
+            {
+                Category = "Frozen",
+                Name = "Frozen green peas 500 g",
+                Price = 2.5m,
+                ImageUrl = "/images/products/green-peas.png"
+            },
+            new Product
+            {
+                Category = "Dairy",
+                Name = "Greek yogurt 500 g",
+                Price = 4.8m,
+                ImageUrl = "/images/products/greek-yogurt.png"
+            },
+            new Product
+            {
+                Category = "Fruits",
+                Name = "Red apples 1 kg",
+                Price = 3.9m,
+                ImageUrl = "/images/products/red-apples.png"
+            },
+            new Product
+            {
+                Category = "Vegetables",
+                Name = "Carrots 1 kg",
+                Price = 2.0m,
+                ImageUrl = "/images/products/carrots.png"
+            },
+            new Product
+            {
+                Category = "Pantry",
+                Name = "Canned chickpeas 400 g",
+                Price = 1.2m,
+                ImageUrl = "/images/products/chickpeas.png"
+            },
+            new Product
+            {
+                Category = "Cleaning",
+                Name = "Laundry detergent 2L",
+                Price = 12.99m,
+                ImageUrl = "/images/products/laundry-detergent.png"
+            },
+            new Product
+            {
+                Category = "Cleaning",
+                Name = "Hand soap 250ml",
+                Price = 2.99m,
+                ImageUrl = "/images/products/hand-soap.png"
+            },
+            new Product
+            {
+                Category = "Cleaning",
+                Name = "Glass cleaner 500ml",
+                Price = 3.79m,
+                ImageUrl = "/images/products/glass-cleaner.png"
+            },
+            new Product
+            {
+                Category = "Cleaning",
+                Name = "Liquid dish soap 500ml",
+                Price = 3.99m,
+                ImageUrl = "/images/products/dish-soap.png"
+            },
+            new Product
+            {
+                Category = "Snacks",
+                Name = "Salted roasted almonds 200 g",
+                Price = 5.0m,
+                ImageUrl = "/images/products/almonds.png"
+            },
+            new Product
+            {
+                Category = "Snacks",
+                Name = "Potato chips 150 g",
+                Price = 2.3m,
+                ImageUrl = "/images/products/potato-chips.png"
+            },
+            new Product
+            {
+                Category = "Bakery",
+                Name = "Chocolate chip cookies",
+                Price = 3.5m,
+                ImageUrl = "/images/products/cookies.png"
+            },
+            new Product
+            {
+                Category = "Dairy",
+                Name = "Butter 250 g",
+                Price = 3.6m,
+                ImageUrl = "/images/products/butter.png"
+            },
+            new Product
+            {
+                Category = "Frozen",
+                Name = "Frozen mango chunks 500 g",
+                Price = 3.8m,
+                ImageUrl = "/images/products/frozen-mango.png"
+            },
+            new Product
+            {
+                Category = "Beverages",
+                Name = "Green tea 20 bags",
+                Price = 3.0m,
+                ImageUrl = "/images/products/green-tea.png"
             },
             new Product
             {
