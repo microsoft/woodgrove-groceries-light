@@ -9,7 +9,9 @@ public class IndexModel : PageModel
     public bool IsCommercialAccount { get; set; } = false;
     public bool HasEggsAllergy { get; set; } = false;
     public List<Product> Products { get; set; } = new List<Product>();
+    public List<string> Categories { get; set; } = new List<string>();
     public List<string> listOfAvatars { get; set; }
+    public Random random = new Random();
 
     public IndexModel(ILogger<IndexModel> logger)
     {
@@ -20,7 +22,16 @@ public class IndexModel : PageModel
     public void OnGet()
     {
         // Get the products
-        Products = ProductData.GetSampleProducts();
+        Products = ProductData.GetSampleProducts()
+            .OrderBy(x => random.Next())
+            .ToList();
+
+        // Get unique categories for dropdown
+        Categories = Products
+            .Select(p => p.Category)
+            .Distinct()
+            .OrderBy(c => c)
+            .ToList();
 
         // Randomize the avatars
         this.listOfAvatars = this.listOfAvatars.OrderBy(i => Guid.NewGuid()).ToList();

@@ -4,117 +4,71 @@
     ViewData["Title"] = "Woodgrove Groceries";
 }
 
-
 @section Header {
     <!-- Welcome message-->
-    <div class="inner-header">
-        <div class="jumbotron" style="margin-top: 20px;">
+
+        <div class="jumbotron inner-header">
             <div class="container">
-                <div class="row align-items-center">
-                    <h1 class="h2"
-                        style="margin-bottom: 5px; margin-top: -10px; text-shadow: 1px 1px 10px rgb(3, 80, 2); w">Welcome to
-                        Woodgrove
-                        Groceries demo</h1>
-                </div>
-                <div class="row align-items-center" style="padding-top: 20px;">
+                <div class="row">
+                    <h1 class="h2" style="text-shadow: 1px 1px 10px rgb(3, 80, 2); w">Woodgrove Groceries demo</h1>
 
-                    <div class="col col-lg-2 avatar-container">
-                        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                            style="margin-top: -30px;">
-                            <div class="carousel-inner" style="width: 150px; padding-left: 20px">
-
-                                @for (var avatar = 0; avatar < Model.listOfAvatars.Count; avatar++)
-                                {
-                                    var avatarActive = (avatar == 0 ? " active" : "");
-
-                                    <div class='@($"carousel-item {avatarActive}")'>
-                                        <img src='@($"/images/Shopping/Shopping_{Model.listOfAvatars[avatar]}.png")'
-                                            class="d-block w-100 avatar" alt="A persong shopping illustration">
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col lead" style="text-align: left;">
-                        <span style="letter-spacing: 0.1px;">
-                            <a href="https://aka.ms/ciam/docs" class="link-without-underline">Microsoft Entra External
-                                ID</a> offers solutions that let you quickly add
-                            intuitive, user-friendly sign-in and sign-up experiences for your external apps.
-                            <b>Woodgrove
-                                Groceries</b> live demo illustrates several authentication experiences for common retail
-                            scenarios.</span>
-                        <div style="text-align: left; padding-top: 15px;">
-                            <i class="bi bi-youtube fs-3" style="vertical-align: -.23em"></i> <a style="color: white;"
-                                class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                                href="https://learn.microsoft.com/en-us/entra/external-id/customers/reference-training-videos#visit-our-video-library">Visit
-                                our video library</a>
-                        </div>
+                    <div class="lead">
+                        <a href="https://aka.ms/ciam/docs" class="link-without-underline">Microsoft Entra External
+                            ID</a> offers solutions that let you quickly add
+                        intuitive, user-friendly sign-in and sign-up experiences for your external apps.
+                        <b>Woodgrove Groceries</b> live demo illustrates several authentication experiences for common retail
+                        scenarios.</span> <i class="bi bi-youtube fs-3" style="vertical-align: -.23em"></i> <a
+                            style="color: white;" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"  href="https://learn.microsoft.com/en-us/entra/external-id/customers/reference-training-videos#visit-our-video-library">Visit
+                            our video library</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
     <!-- Welcome message end-->
 }
 
-<!-- Numbers -->
-<div>&nbsp;</div>
-<div id="numbers" class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-1 blur shadow-blur homepage-numbers"
-    style="width: 100%;">
-    <div class="row">
-        <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-                <h2 class="number-text h1"> <span class="countup">1350</span>+</h2>
-                <h3 class="mt-3 h5">Stores</h3>
-                <p class="text-sm number-description">With more than 1,350 local stores and 80 distribution centers,
-                    it's easier than ever to shop online and
-                    buy locally.</p>
-            </div>
-            <hr class="vertical dark">
+
+<!-- #region  Filters -->
+<div class="row mb-4" style="padding-top: 35px;">
+    <div class="col">
+        <div class="font-weight-bold h4" style="letter-spacing: 2px; color: rgb(3, 80, 2);">
+            <strong>Get in the groove for shopping</strong>
         </div>
-        <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-                <h2 class="number-text h1" id="num3" num="39"><span class="countup">7500</span>+</h2>
-                <h3 class="mt-3 h5">Products</h3>
-                <p class="text-sm number-description">We offer a variety of products, top-quality fresh and healthy
-                    foods. Friendly to your wallet and a dynamic shopping experience.</p>
-            </div>
-            <hr class="vertical dark">
+    </div>
+    <div class="col-md-2">
+        <div class="input-group">
+            <span class="input-group-text">
+                <i class="bi bi-filter-square"></i>
+            </span>
+            <select class="form-select" id="categoryFilter" aria-label="Filter by category">
+                <option value="">All Categories</option>
+                @foreach (var category in Model.Categories)
+                {
+                    <option value="@category">@category</option>
+                }
+            </select>
         </div>
-        <div class="col-md-4">
-            <div class="p-3 text-center">
-                <h2 class="number-text h1" id="num3" num="39"><span class="countup">3200</span>+</h2>
-                <h3 class="mt-3 h5">Employees</h3>
-                <p class="text-sm number-description">Woodgrove is committed to build a diverse workforce that
-                    reflects
-                    our core values and the communities we serve.</p>
-            </div>
+    </div>
+    <div class="col-md-2">
+        <div class="input-group">
+            <span class="input-group-text">
+                <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control" id="searchInput" placeholder="Search products..."
+                aria-label="Search products">
         </div>
     </div>
 </div>
-<!-- Numbers end-->
 
-
-<div class="container mt-4">
-    <div style="margin-bottom: 5px;">&nbsp;</div>
-
-    <div class="d-flex justify-content-between">
-        <div>
-            <div class="font-weight-bold h4" style="letter-spacing: 2px; color: rgb(3, 80, 2);">
-                <strong>Get in the groove for shopping</strong>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
+<div class="row row-cols-1 row-cols-md-4 g-4" id="productsContainer">
 
     @foreach (var product in Model.Products)
     {
-        <div class="col-sm">
+        <div class="col-md product-item" data-category="@product.Category" data-name="@product.Name.ToLower()">
             <div class="card hp_card">
                 <div class="card-body">
-                    <img class="card-img-top" src="@product.ImageUrl" alt="Grapes">
+                    <img class="card-img-top" src="@product.ImageUrl" alt="@product.Name">
                     @if (Model.IsCommercialAccount)
                     {
                         <a style="text-decoration: none" href="/Commercial">
@@ -144,4 +98,5 @@
 
 @section Scripts {
     <script src="~/js/index.js"></script>
+
 }
