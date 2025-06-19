@@ -269,7 +269,7 @@ body {
   position: relative;
   text-align: center;
   /* background: linear-gradient(60deg, var(--color-dark) 0%, var(--color-light) 100%); */
-  background-color: var(--color-dark);
+  background-color: #1c5a02;
   color: white;
 }
 
