@@ -10,7 +10,17 @@ builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
     .EnableTokenAcquisitionToCallDownstreamApi()
     .AddDownstreamApi("WoodgroveGroceriesApi", builder.Configuration.GetSection("MicrosoftEntraId"))
     .AddInMemoryTokenCaches();
-    
+
+// Configure OpenID Connect options
+// This is important to ensure that the roles and name claims are correctly mapped
+builder.Services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme,
+        options =>
+        {
+            options.TokenValidationParameters.RoleClaimType = "roles";
+            // Configure which claim to use as the user's name in the User.Identity.Name object.
+            options.TokenValidationParameters.NameClaimType = "name";
+        });
+
 // Add authorization services
 builder.Services.AddAuthorization();
 

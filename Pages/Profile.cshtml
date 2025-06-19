@@ -1,0 +1,55 @@
+﻿@page
+@model Pages.ProfileModel
+@{
+    ViewData["Title"] = "Your Woodgrove account";
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-white">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Claims in the ID token</h5>
+                <div class="d-flex gap-2">
+                    <input type="text" id="tableSearch" class="form-control form-control-sm" placeholder="Search...">
+                    <button class="btn btn-primary btn-sm">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" id="productTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Claim</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach (var claim in User.Claims)
+                        {
+                        <tr>
+                            <td scope="row">@claim.Type</td>
+                            <td class="text-break">@claim.Value</td>
+                        </tr>
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $("#tableSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#productTable tbody tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}
