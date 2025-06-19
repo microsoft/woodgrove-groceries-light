@@ -9,11 +9,6 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
 html {
   position: relative;
@@ -67,29 +62,16 @@ body {
 }
 
 .card-button {
-  border-style: none!important;
-}
-
-/* .card-button .bi {
-  font-size: x-large;
-  margin-top: -5px;
-  line-height: 0;
-  padding-right: 5px;
-} */
-
-.card {
-  border-radius: 0.55rem;
-  /* background-color: rgb(244, 251, 244); */
   border-style: none !important;
-  margin-top: 25px !important;
-  /* box-shadow: 0 0 10px 3px rgb(0 0 0 / 16%) */
 }
 
 .hp_card {
-  margin-left: 10px;
-  margin-right: 10px;
-  min-width: 280px;
+  border-color: #F5F5F5 !important;
+  margin-top: 25px !important;
+  min-width: 180px;
   max-width: 280px;
+  min-height: 260px;
+  max-height: 350px;
 }
 
 /* .card-img-top
@@ -98,7 +80,7 @@ body {
 } */
 
 .hp_card:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
   /* box-shadow: 0 0 2px 0.5px var(--color-light) */
 }
 
@@ -121,12 +103,6 @@ body {
   height: 53px;
 }
 
-@media (max-width: 768px) {
-  .hp_card:hover .reveal-details {
-    max-height: 48px;
-    height: 48px;
-  }
-}
 
 .dropdown-item.focus {
   background-color: red !important;
@@ -187,17 +163,17 @@ body {
 .card-price {
   margin: 0 !important;
   font-size: medium;
-  
+
 }
 
-.card-buttons{
+.card-buttons {
   margin-top: 7px;
 }
 
 .card-discount {
   /* justify-content: center; */
   /* align-items: center; */
-  border-radius: 100%;
+  /* border-radius: 100%; */
   /* text-align: center; */
   background-color: #ffc107;
   color: black;
@@ -300,11 +276,6 @@ body {
   /* box-shadow: 1px 1px 5px 1px var(--color-light); */
 }
 
-@media (max-width: 1200px) {
-  .avatar-container {
-    display: none;
-  }
-}
 
 /******** jumbotron end ************/
 
@@ -343,13 +314,6 @@ body {
   max-height: 60px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-  /* CSS to disable motion goes here */
-  .waves {
-    visibility: hidden;
-  }
-}
 
 .parallax>use {
   animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
@@ -387,21 +351,6 @@ body {
 
 /******* Waves animation end ********/
 
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-
-  .content {
-    height: 30vh;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-}
 
 /***** Homepage numbers *****/
 .homepage-numbers {
@@ -530,7 +479,8 @@ pre.code {
   border-color: rgb(230, 230, 230);
   border-style: solid;
   border-width: 1px;
-  border-radius: 15px;;
+  border-radius: 15px;
+  ;
   padding-top: 15px;
   padding-left: 20px;
 }

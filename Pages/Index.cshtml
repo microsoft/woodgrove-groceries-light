@@ -61,11 +61,11 @@
     </div>
 </div>
 
-<div class="row row-cols-1 row-cols-md-4 g-4" id="productsContainer">
+<div class="row row-cols-2 row-cols-md-4 g-3 align-items-center justify-content-center" id="productsContainer">
 
     @foreach (var product in Model.Products)
     {
-        <div class="col-md product-item" data-category="@product.Category" data-name="@product.Name.ToLower()">
+        <div class="col product-item" data-category="@product.Category" data-name="@product.Name.ToLower()">
             <div class="card hp_card">
                 <div class="card-body">
                     <img class="card-img-top" src="@product.ImageUrl" alt="@product.Name">
