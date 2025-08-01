@@ -128,7 +128,7 @@ public static class ProductData
             new Product
             {
                 Category = "Frozen",
-                Name = "Frozen green peas 500 g",
+                Name = "Frozen green peas 500g",
                 Price = 2.5m,
                 ImageUrl = "/images/products/green-peas.png",
                 Description = "Flash-frozen green peas that retain their nutrients and flavor. Perfect for side dishes, soups, and stir-fries."
@@ -136,7 +136,7 @@ public static class ProductData
             new Product
             {
                 Category = "Dairy",
-                Name = "Greek yogurt 500 g",
+                Name = "Greek yogurt 500g",
                 Price = 4.8m,
                 ImageUrl = "/images/products/greek-yogurt.png",
                 Description = "Thick, creamy Greek yogurt with high protein content and probiotics. Perfect for breakfast, snacks, or as a healthy ingredient in recipes."
@@ -160,7 +160,7 @@ public static class ProductData
             new Product
             {
                 Category = "Pantry",
-                Name = "Canned chickpeas 400 g",
+                Name = "Canned chickpeas 400g",
                 Price = 1.2m,
                 ImageUrl = "/images/products/chickpeas.png",
                 Description = "Premium canned chickpeas, ready to use. High in protein and fiber, perfect for salads, hummus, soups, and Mediterranean dishes."
@@ -200,7 +200,7 @@ public static class ProductData
             new Product
             {
                 Category = "Snacks",
-                Name = "Salted roasted almonds 200 g",
+                Name = "Salted roasted almonds 200g",
                 Price = 5.0m,
                 ImageUrl = "/images/products/almonds.png",
                 Description = "Premium roasted almonds with the perfect amount of salt. A healthy, protein-rich snack packed with nutrients."
@@ -208,7 +208,7 @@ public static class ProductData
             new Product
             {
                 Category = "Snacks",
-                Name = "Potato chips 150 g",
+                Name = "Potato chips 150g",
                 Price = 2.3m,
                 ImageUrl = "/images/products/potato-chips.png",
                 Description = "Crispy, golden potato chips made from premium potatoes. The perfect crunchy snack for any occasion."
@@ -224,7 +224,7 @@ public static class ProductData
             new Product
             {
                 Category = "Dairy",
-                Name = "Butter 250 g",
+                Name = "Butter 250g",
                 Price = 3.6m,
                 ImageUrl = "/images/products/butter.png",
                 Description = "Rich, creamy butter made from fresh cream. Essential for baking, cooking, and spreading on bread or toast."
@@ -232,7 +232,7 @@ public static class ProductData
             new Product
             {
                 Category = "Frozen",
-                Name = "Frozen mango chunks 500 g",
+                Name = "Frozen mango chunks 500g",
                 Price = 3.8m,
                 ImageUrl = "/images/products/frozen-mango.png",
                 Description = "Sweet, tropical frozen mango chunks perfect for smoothies, desserts, or eating straight from the bag as a healthy treat."
@@ -248,7 +248,7 @@ public static class ProductData
             new Product
             {
                 Category = "Pantry",
-                Name = "Raw unfiltered local honey 500 g",
+                Name = "Raw unfiltered local honey 500g",
                 Price = 12.0m,
                 ImageUrl = "/images/products/honey.png",
                 Description = "Pure, raw unfiltered honey from local beekeepers. Natural sweetener with unique floral notes and health benefits."
@@ -288,7 +288,7 @@ public static class ProductData
             new Product
             {
                 Category = "Bakery",
-                Name = "French bread 400 g",
+                Name = "French bread 400g",
                 Price = 13.0m,
                 ImageUrl = "/images/products/bread.jpg",
                 Description = "Authentic French bread with a crispy crust and soft, airy interior. Perfect for sandwiches, toast, or enjoying with meals."
