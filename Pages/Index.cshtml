@@ -1,29 +1,31 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Woodgrove Groceries";
+    ViewData["Title"] = "Zava online";
 }
 
 @section Header {
     <!-- Welcome message-->
 
-        <div class="jumbotron inner-header">
-            <div class="container">
-                <div class="row">
-                    <h1 class="h2" style="text-shadow: 1px 1px 10px rgb(3, 80, 2); w">Woodgrove Groceries demo</h1>
+    <div class="jumbotron inner-header">
+        <div class="container">
+            <div class="row">
+                <h1 class="h2">Welcome to ZAVA</h1>
 
-                    <div class="lead">
-                        <a href="https://aka.ms/ciam/docs" class="link-without-underline">Microsoft Entra External
-                            ID</a> offers solutions that let you quickly add
-                        intuitive, user-friendly sign-in and sign-up experiences for your external apps.
-                        <b>Woodgrove Groceries</b> live demo illustrates several authentication experiences for common retail
-                        scenarios.</span> <i class="bi bi-youtube fs-3" style="vertical-align: -.23em"></i> <a
-                            style="color: white;" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"  href="https://learn.microsoft.com/en-us/entra/external-id/customers/reference-training-videos#visit-our-video-library">Visit
-                            our video library</a>
-                    </div>
+                <div class="lead">
+                    <a href="https://aka.ms/ciam/docs" class="link-without-underline">Microsoft Entra External
+                        ID</a> offers solutions that let you quickly add
+                    intuitive, user-friendly sign-in and sign-up experiences for your external apps.
+                    <b>Zava online</b> demo illustrates several authentication experiences for common retail
+                    scenarios.</span> <i class="bi bi-youtube fs-3" style="vertical-align: -.23em"></i> <a
+                        style="color: white;"
+                        class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                        href="https://learn.microsoft.com/en-us/entra/external-id/customers/reference-training-videos#visit-our-video-library">Visit
+                        our video library</a>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Welcome message end-->
 }
@@ -67,16 +69,18 @@
     {
         <div class="col product-item" data-category="@product.Category" data-name="@product.Name.ToLower()">
             <div class="card hp_card">
-                <div class="card-body">
-                    <img class="card-img-top" src="@product.ImageUrl" alt="@product.Name">
-                    @if (Model.IsCommercialAccount)
-                    {
-                        <a style="text-decoration: none" href="/Commercial">
-                            <div class="card-discount">20%</div>
-                        </a>
-                    }
 
+                <img class="card-img-top" src="@product.ImageUrl" alt="@product.Name">
+                @if (Model.IsCommercialAccount)
+                {
+                    <a style="text-decoration: none" href="/Commercial">
+                        <div class="card-discount">20%</div>
+                    </a>
+                }
+
+                <div class="card-body">
                     <div class="card-title">@product.Name</div>
+                    <div class="card-description">@product.Description</div>
 
                     <div class="row card-buttons">
                         <div class="col card-price">

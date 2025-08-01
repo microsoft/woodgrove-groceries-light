@@ -21,7 +21,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
+  background-color: var(--color-light);
 }
 
 .link-without-underline,
@@ -56,14 +57,12 @@ body {
   opacity: 1;
 }
 
+
 .card-title {
-  /* font-family: cursive;
-  font-size: xx-large; */
-  /* color: #404040; */
-  padding-top: 8px;
-  text-align: left;
-  font-weight: 300;
-  margin: 0 !important;
+  color: var(--dark-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .card-button {
@@ -71,12 +70,13 @@ body {
 }
 
 .hp_card {
-  border-color: #F5F5F5 !important;
   margin-top: 25px !important;
   min-width: 180px;
   max-width: 280px;
-  min-height: 260px;
-  max-height: 350px;
+  min-height: 460px;
+  max-height: 460px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* .card-img-top
@@ -165,9 +165,26 @@ body {
   color: var(--color-very-dark);
 }
 
+/********** home page cards *********/
+.hp_card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-description {
+  color: var(--color-medium);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
 .card-price {
-  margin: 0 !important;
-  font-size: medium;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary) !important;
+  margin-bottom: 15px;
 
 }
 
@@ -210,12 +227,12 @@ body {
 }
 
 /***** Header section *******/
-.woodgrove-header-link span {
+.azva-header-link span {
   text-decoration-line: underline;
   color: black;
 }
 
-.woodgrove-header-link:hover span {
+.azva-header-link:hover span {
   color: green;
 }
 
@@ -391,11 +408,12 @@ hr.vertical {
 }
 
 
-/*** New Woodgrove Footer ***/
-.woodgrove-footer {
+/*** New Zava online Footer ***/
+.azva-footer {
   background: var(--color-dark);
   color: var(--color-light);
-  margin-top: 4rem;
+  margin-top: 4rem !important;
+  ;
 }
 
 .footer-title {
@@ -464,7 +482,7 @@ hr.vertical {
 
 
 /***** Spiner ******/
-.woodgrove-spinner {
+.azva-spinner {
   width: 5rem;
   height: 5rem;
   margin-top: 100px;
