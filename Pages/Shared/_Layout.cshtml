@@ -49,23 +49,62 @@
     </div>
 
     <!-- Footer -->
-    <footer class="border-top footer text-muted" style="border-top-style: none!important; height: 100px;">
-        <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
-            <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700"
-                fill="rgb(50, 111, 2)" />
-            <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="rgb(222, 238, 222)" />
-        </svg>
-        <div class="container-fluid footer-text"
-            style="width: 100%; top: -60px; position: relative; background-color: rgb(222, 238, 222);">
-            &copy; 2025 - Woodgrove Groceries &nbsp; - &nbsp;&nbsp;
-            <i class="bi bi-info-circle"></i> <a asp-area="" asp-page="/Help" style="padding-right: 10px;">Help</a>
-            <i class="bi bi-lock"></i> <a asp-area="" asp-page="/Privacy" style="padding-right: 10px;">Privacy</a>
-            <i class="bi bi-file-earmark-text"></i> <a asp-area="" asp-page="/tos" style="padding-right: 10px;">Terms of
-                service</a>
-            <i class="bi bi-github"></i> <a href="https://github.com/microsoft/woodgrove-groceries"
-                style="padding-right: 10px;">Source code</a>
-            <i class="bi bi-github"></i> <a href="https://github.com/microsoft/woodgrove-auth-api"
-                style="padding-right: 10px;">Authentication API</a>
+    <footer class="woodgrove-footer mt-auto">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-md-3">
+                    <h5 class="footer-title">Woodgrove Groceries</h5>
+                    <p class="footer-text">Fresh groceries delivered to your door. Quality products, exceptional service.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="footer-subtitle">Shop</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="footer-link">Fresh Produce</a></li>
+                        <li><a href="#" class="footer-link">Dairy & Eggs</a></li>
+                        <li><a href="#" class="footer-link">Meat & Seafood</a></li>
+                        <li><a href="#" class="footer-link">Pantry</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="footer-subtitle">Support</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a asp-page="/Help" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Delivery Info</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="footer-subtitle">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a asp-page="/Privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="footer-subtitle">Connect With Us</h6>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="footer-social-link me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="footer-social-link me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social-link"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <p class="footer-text small">Subscribe to our newsletter for special offers and updates.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row py-3">
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">© 2025 Woodgrove Groceries. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    
+                </div>
+            </div>
         </div>
     </footer>
 

@@ -1,8 +1,13 @@
 :root {
-  --color-light: #267A02;
-  --color-very-light: rgb(5, 166, 2);
-  --color-dark: #1F6402;
-  --color-very-dark: #164601;
+  --color-very-dark: #0A0C0C;
+  --color-dark: #1C3D4B;
+  --color-medium-dark: #585751;
+  --color-medium: #696E6F;
+  --color-medium-light: #A6A49D;
+  --color-light: #EBEFF3;
+  --color-very-light: #BDD5E0;
+  --color-accent: #9BCBE1;
+  --color-primary: #427187;
 }
 
 html {
@@ -126,9 +131,9 @@ body {
   top: calc(50vh - 137.5px);
   right: 20px;
   color: white;
-  background-image: linear-gradient(60deg, var(--color-dark) 0%, var(--color-very-light) 100%);
+  background-image: linear-gradient(60deg, var(--color-dark) 0%, var(--color-primary) 100%);
   border-radius: 15px 15px 0 0;
-  border-color: var(--color-very-light);
+  border-color: var(--color-primary);
   transform: rotate(270deg);
   transform-origin: right;
   display: flex;
@@ -138,7 +143,7 @@ body {
 }
 
 .offcanvas-header {
-  background-image: linear-gradient(60deg, var(--color-dark) 0%, var(--color-light) 100%);
+  background-image: linear-gradient(60deg, var(--color-dark) 0%, var(--color-primary) 100%);
   color: white;
 }
 
@@ -192,7 +197,7 @@ body {
 
 .card-allergy {
   color: red;
-  background-color: #F4FBF4;
+  background-color: var(--color-light);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -218,7 +223,7 @@ body {
 .navbar {
   position: relative;
   text-align: center;
-  background-color: #CDDFCC;
+  background-color: var(--color-light);
   border-radius: 10px;
   color: white;
 }
@@ -245,7 +250,7 @@ body {
   position: relative;
   text-align: center;
   /* background: linear-gradient(60deg, var(--color-dark) 0%, var(--color-light) 100%); */
-  background-color: #1c5a02;
+  background-color: var(--color-dark);
   color: white;
 }
 
@@ -281,7 +286,7 @@ body {
 
 /******* Header buttons ********/
 .header-button {
-  background-image: linear-gradient(60deg, var(--color-dark) 0%, var(--color-light) 100%);
+  background-image: linear-gradient(60deg, var(--color-dark) 0%, var(--color-primary) 100%);
   /* background-color: var(--color-dark)!important; */
   letter-spacing: -.025rem;
   box-shadow: 0 4px 7px -1px rgba(0, 0, 0, .11), 0 2px 4px -1px rgba(0, 0, 0, .07);
@@ -296,7 +301,7 @@ body {
 }
 
 .header-button:hover {
-  background-image: linear-gradient(60deg, var(--color-light) 0%, var(--color-dark) 100%);
+  background-image: linear-gradient(60deg, var(--color-primary) 0%, var(--color-dark) 100%);
   /* background-image: linear-gradient(60deg, var(--color-dark) 30%, var(--color-light) 70%); */
   /* border-color: var(--color-dark); */
   border-style: solid;
@@ -385,36 +390,74 @@ hr.vertical {
   padding-right: 10px;
 }
 
-/***** Homepage numbers end *****/
 
-/*** Footer ****/
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  /* Set the fixed height of the footer here */
-  line-height: 30px !important;
-  /* Vertically center the text there */
-  padding-top: 150px;
-  white-space: normal !important;
-  z-index: -12;
+/*** New Woodgrove Footer ***/
+.woodgrove-footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  margin-top: 4rem;
+}
+
+.footer-title {
+  color: var(--color-very-light);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-subtitle {
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
 }
 
 .footer-text {
-  color: black;
+  color: var(--color-medium-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.footer-text a:link {
-  color: black;
+.footer-links {
+  margin-bottom: 0;
 }
 
-.footer-text a:visited {
-  color: black;
+.footer-links li {
+  margin-bottom: 0.2rem;
 }
 
-.footer-text a:hover {
-  color: black;
+.footer-link {
+  color: var(--color-medium-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-very-light);
+  text-decoration: none;
+}
+
+.footer-social-link {
+  color: var(--color-medium-light);
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.footer-divider {
+  border-color: var(--color-medium);
+  opacity: 0.3;
+  margin: 0;
+}
+
+.footer-copyright {
+  color: var(--color-medium-light);
+  font-size: 0.85rem;
 }
 
 /*** Footer ends ****/
@@ -435,9 +478,9 @@ hr.vertical {
   height: 40px;
   cursor: pointer;
   color: white !important;
-  background-image: linear-gradient(60deg, #0B60B0 30%, #40A2D8 100%);
+  background-image: linear-gradient(60deg, var(--color-primary) 30%, var(--color-accent) 100%);
   border-radius: 5px 5px 0 0;
-  border-color: #0B60B0;
+  border-color: var(--color-primary);
   z-index: 9999;
 }
 
@@ -546,7 +589,7 @@ pre.code {
 }
 
 .collapse.example {
-  background-color: #0080000a;
+  background-color: rgba(235, 239, 243, 0.1);
   padding-left: 15px;
   padding-bottom: 15px;
   -webkit-transition: none !important;
@@ -568,17 +611,17 @@ pre.code {
 
 .profile-content {
   margin-left: 30px;
-  background-color: #0080000a;
+  background-color: rgba(235, 239, 243, 0.1);
   padding: 10px 10px 10px 30px;
   border-radius: 10px;
 }
 
 .profile-card {
-  background-image: linear-gradient(to bottom right, #1b5702 60%, var(--color-light) 100%);
+  background-image: linear-gradient(to bottom right, var(--color-dark) 60%, var(--color-primary) 100%);
 }
 
 .profile-card-header {
-  text-shadow: 1px 1px 10px rgb(3, 80, 2);
+  text-shadow: 1px 1px 10px var(--color-very-dark);
 }
 
 .profile-card-text {
